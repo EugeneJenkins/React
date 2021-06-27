@@ -1,0 +1,16 @@
+.item{
+    color: #48e015 ;
+}
+
+.item img{
+    max-width: 50px;
+}
+
+.content{
+    grid-area: content;
+    background-color: #f6d3ff
+}
+
+.post{
+
+}
