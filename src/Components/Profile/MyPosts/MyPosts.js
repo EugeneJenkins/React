@@ -13,7 +13,8 @@ const MyPosts = () => {
                     <button>Remove test</button>
                 </div>
             </div>
-            <Post />
+            <Post message = {'aaasdasdas'} like = {'1'} />
+            <Post message = {'My new post'} like = {'23'} />
         </div>
     );
 }
