@@ -1,5 +1,5 @@
 import React from "react";
-import classes from "./Dialogs.module.css";
+// import classes from "./Dialogs.module.css";
 
 
 class Dialogs extends React.Component{
