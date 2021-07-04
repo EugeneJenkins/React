@@ -1,0 +1,6 @@
+POST http://127.0.0.1/test.php
+Content-Type: application/json
+
+{"test":1,"test2":10}
+
+###
