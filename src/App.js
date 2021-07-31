@@ -23,6 +23,7 @@ const App = (props) => {
                     <Route path={'/music'} render={() => <Music/>}/>
                     <Route path={'/news'} render={() => <News/>}/>
                     <Route path={'/settings'} render={() => <Settings/>}/>
+
                 </div>
             </div>
         </BrowserRouter>

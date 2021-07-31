@@ -1,0 +1,10 @@
+.row{
+    margin-top: 20px;
+}
+
+.friends-text{
+    padding: 0 20px;
+}
+li {
+    list-style-type: none; /* Убираем маркеры */
+}

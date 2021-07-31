@@ -13,6 +13,10 @@
     color: gold;
 }
 
+.item.friends{
+    margin-top: 20px;
+}
+
 .item a {
     color: white;
     text-decoration: none;;
