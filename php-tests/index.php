@@ -1,21 +1,25 @@
 <?php
 
-$data = [
-    'test' => 1,
-    'test2' => 10
-];
+class Test {
 
-$url = "http://127.0.0.1/test.php";
-//$data = array('field1' => 'value', 'field2' => 'value');
-$options = array(
-    'http' => array(
-        'header'  => "Content-type: application/json\r\n",
-        'method'  => 'POST',
-        'content' => json_encode($data),
-    )
-);
+    public function start($a, & $b=null)
+    {
+        $b = $a;
 
-$context  = stream_context_create($options);
-$result = file_get_contents( $url, false, $context );
-var_dump($result);
-//$response = json_decode(  );
+        $this->stop();
+    }
+
+    private function stop()
+    {
+        echo 'stop';
+    }
+}
+
+$test = new Test();
+
+$test->start(10,$testB);
+
+
+echo "\n";
+echo $testB;
+echo "\n";
