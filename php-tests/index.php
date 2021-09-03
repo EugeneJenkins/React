@@ -23,3 +23,4 @@ $test->start(10,$testB);
 echo "\n";
 echo $testB;
 echo "\n";
+test 
