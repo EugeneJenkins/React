@@ -1,6 +1,8 @@
 let rerenderTree = () => {
     console.log('rerenderTree')
 }
+const addPost = "ADD-POST";
+const updateNewPostText = "UPDATE-NEW-POST-TEXT";
 
 let store = {
     _state: {
@@ -57,11 +59,23 @@ let store = {
     },
     dispatch(action) {
         if (action.type === "ADD-POST") {
-           this._addPost()
-        }
-        else if (action.type === "UPDATE-NEW-POST-TEXT"){
+            this._addPost()
+        } else if (action.type === "UPDATE-NEW-POST-TEXT") {
             this._updateNewPostText(action.newText)
         }
+    }
+}
+
+export const addPostActionCreator = () => {
+    return {
+        type: addPost
+    }
+}
+
+export const updateNewPostActionCreator = (text) => {
+    return {
+        type: updateNewPostText,
+        newText: text
     }
 }
 
