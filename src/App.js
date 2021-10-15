@@ -9,6 +9,7 @@ import Dialogs from "./Components/Dialogs/Dialogs";
 import Music from "./Components/Music/Music"
 import Settings from "./Components/Settings/Settings";
 import News from "./Components/News/News";
+import store from "./redux/state";
 
 const App = (props) => {
 
@@ -22,7 +23,7 @@ const App = (props) => {
                         path={'/dialogs'}
                         render={() =>
                             <Dialogs
-                                state={props.state.dialogsPage}
+                                store={props.store}
                             />}
                     />
                     <Route

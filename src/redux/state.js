@@ -1,8 +1,11 @@
 let rerenderTree = () => {
     console.log('rerenderTree')
 }
-const addPost = "ADD-POST";
-const updateNewPostText = "UPDATE-NEW-POST-TEXT";
+const ADD_POST = "ADD-POST";
+const UPDATE_NEW_POST_TEXT = "UPDATE-NEW-POST-TEXT";
+
+const UPDATE_NEW_MESSAGE_BODY = "UPDATE-NEW-MESSAGE-BODY"
+const SEND_MESSAGE = "SEND-MESSAGE";
 
 let store = {
     _state: {
@@ -23,6 +26,7 @@ let store = {
                 {id: 5, message: 'TOASTER 5'},
                 {id: 6, message: 'THX'},
             ],
+            newMsgText: "",
             dialogs: [
                 {id: 1, name: 'User 1'},
                 {id: 2, name: 'User 2'},
@@ -58,24 +62,45 @@ let store = {
         rerenderTree = observer;
     },
     dispatch(action) {
-        if (action.type === "ADD-POST") {
+        if (action.type === ADD_POST) {
             this._addPost()
-        } else if (action.type === "UPDATE-NEW-POST-TEXT") {
+        } else if (action.type === UPDATE_NEW_POST_TEXT) {
             this._updateNewPostText(action.newText)
+        } else if (action.type === UPDATE_NEW_MESSAGE_BODY) {
+            this._state.dialogsPage.newMsgText = action.newMsgText
+            this._callSubscribe(this._state)
+        } else if (action.type === SEND_MESSAGE) {
+            let body = this._state.dialogsPage.newMsgText;
+            this._state.dialogsPage.newMsgText = '';
+            this._state.dialogsPage.messagesData.push({id: 7, message: body});
+            this._callSubscribe(this._state)
         }
     }
 }
 
 export const addPostActionCreator = () => {
     return {
-        type: addPost
+        type: ADD_POST
     }
 }
 
 export const updateNewPostActionCreator = (text) => {
     return {
-        type: updateNewPostText,
+        type: UPDATE_NEW_POST_TEXT,
         newText: text
+    }
+}
+
+export const sendMessageCreator = () => {
+    return {
+        type: SEND_MESSAGE
+    }
+}
+
+export const newMessageBodyCreator = (newMsgText) => {
+    return {
+        type: UPDATE_NEW_MESSAGE_BODY,
+        newMsgText: newMsgText
     }
 }
 
