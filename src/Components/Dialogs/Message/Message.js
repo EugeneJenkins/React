@@ -1,7 +1,10 @@
-import classes from "../Dialogs.module.css";
+import classes from '../Dialogs.module.css';
 
-const Message = (props) => {
-    return <div className={classes.message}> {props.massage}</div>;
-}
+const Message = (props) => (
+  <div className={classes.message}>
+    {' '}
+    {props.massage}
+  </div>
+);
 
 export default Message;
