@@ -4,18 +4,11 @@ import Post from './Post/Post';
 import { addPostActionCreator, updateNewPostActionCreator } from '../../../redux/profileReducer';
 
 const MyPosts = (props) => {
-  const state = props.store.getState().dialogsPage;
+  const state = props.store.getState().profilePage;
   const postElements = state.posts.map((post) => <Post message={post.message} like={post.likesCount} />);
-
-  const addPost = () => {
-    props.store.dispatch(addPostActionCreator());
-  };
-
-  const onPostChange = () => {
-    props.store.dispatch(updateNewPostActionCreator(newPostElement.current.value));
-  };
-
   const newPostElement = React.createRef();
+  const addPost = () => { props.store.dispatch(addPostActionCreator()); };
+  const onPostChange = () => { props.store.dispatch(updateNewPostActionCreator(newPostElement.current.value)); };
 
   return (
     <div className={classes.postsBlock}>
@@ -27,6 +20,7 @@ const MyPosts = (props) => {
           </div>
           <div>
             <button
+              type="button"
               onClick={addPost}
             >
               Add Post

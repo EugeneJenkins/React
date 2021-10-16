@@ -7,7 +7,7 @@ let rerenderTree = () => {
 };
 
 const store = {
-  _state: {
+  state: {
     profilePage: {
       posts: [
         { id: 1, message: 'Hi', likesCount: 1 },
@@ -38,21 +38,21 @@ const store = {
     sidebar: {},
   },
   getState() {
-    return this._state;
+    return this.state;
   },
-  _callSubscriber() {
+  callSubscriber() {
     // console.log('Subscribed');
-    rerenderTree(this._state);
+    rerenderTree(this.state);
   },
   subscribe(observer) {
     rerenderTree = observer;
   },
   dispatch(action) {
-    this._state.profilePage = profileReducer(this._state.profilePage, action);
-    this._state.dialogsPage = dialogsReducer(this._state.dialogsPage, action);
-    this._state.sidebar = sidebarReducer(this._state.sidebar, action);
+    this.state.profilePage = profileReducer(this.state.profilePage, action);
+    this.state.dialogsPage = dialogsReducer(this.state.dialogsPage, action);
+    this.state.sidebar = sidebarReducer(this.state.sidebar, action);
 
-    this._callSubscriber(this._state);
+    this.callSubscriber(this.state);
   },
 };
 
