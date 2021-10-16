@@ -1,3 +1,4 @@
+import React from 'react';
 import classes from './friends.module.css';
 
 const FriendsNav = () => (

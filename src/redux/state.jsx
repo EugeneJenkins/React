@@ -3,7 +3,7 @@ import dialogsReducer from './dialogsReducer';
 import sidebarReducer from './sidebarReducer';
 
 let rerenderTree = () => {
-  console.log('rerenderTree');
+  // console.log('rerenderTree');
 };
 
 const store = {
@@ -41,7 +41,7 @@ const store = {
     return this._state;
   },
   _callSubscriber() {
-    console.log('Subscribed');
+    // console.log('Subscribed');
     rerenderTree(this._state);
   },
   subscribe(observer) {
