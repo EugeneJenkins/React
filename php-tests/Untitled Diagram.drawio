@@ -1,1 +1,65 @@
-<mxfile host="app.diagrams.net" modified="2022-02-17T21:35:13.103Z" agent="5.0 (X11)" version="16.6.0" etag="dhi4RFEMaL1T88MnIkOk" type="github"><diagram id="F2fTpCa3_TIqwmdzorcZ">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2022-02-17T21:49:41.884Z" agent="5.0 (X11)" etag="L6UjU3FD8JHZ4celsYnU" version="16.6.0" type="github">
+  <diagram id="F2fTpCa3_TIqwmdzorcZ" name="Page-1">
+    <mxGraphModel dx="1354" dy="793" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="9bBv2vQjrmbT0s0uy5_B-2" value="Exception" style="swimlane;" vertex="1" parent="1">
+          <mxGeometry x="380" y="110" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="9bBv2vQjrmbT0s0uy5_B-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="9bBv2vQjrmbT0s0uy5_B-3" target="9bBv2vQjrmbT0s0uy5_B-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9bBv2vQjrmbT0s0uy5_B-3" value="MainException" style="swimlane;" vertex="1" parent="1">
+          <mxGeometry x="380" y="270" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="9bBv2vQjrmbT0s0uy5_B-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="9bBv2vQjrmbT0s0uy5_B-5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="380" y="320" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="200" y="320" />
+              <mxPoint x="380" y="320" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9bBv2vQjrmbT0s0uy5_B-5" value="GatewayException" style="swimlane;" vertex="1" parent="1">
+          <mxGeometry x="100" y="440" width="200" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="9bBv2vQjrmbT0s0uy5_B-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="9bBv2vQjrmbT0s0uy5_B-6">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="580" y="320" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="760" y="320" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9bBv2vQjrmbT0s0uy5_B-6" value="PaymentException" style="swimlane;" vertex="1" parent="1">
+          <mxGeometry x="660" y="430" width="200" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="9bBv2vQjrmbT0s0uy5_B-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="9bBv2vQjrmbT0s0uy5_B-10">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="860" y="495" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1040" y="495" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9bBv2vQjrmbT0s0uy5_B-10" value="PaymentNotFoundException" style="swimlane;" vertex="1" parent="1">
+          <mxGeometry x="920" y="640" width="200" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="9bBv2vQjrmbT0s0uy5_B-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="9bBv2vQjrmbT0s0uy5_B-15">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="860" y="470" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1300" y="470" />
+              <mxPoint x="860" y="470" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9bBv2vQjrmbT0s0uy5_B-15" value="PaymentException" style="swimlane;" vertex="1" parent="1">
+          <mxGeometry x="1200" y="640" width="200" height="110" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
